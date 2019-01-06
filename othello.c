@@ -11,7 +11,7 @@ int main(int argc,char* argv[]){
         for(j=0;j<8;j++)
             field[i][j]=argv[i+1][j];
     findMine(field);
-    //printField(field);
+    printField(field);
 return 0;
 }
 bool checkLimit(int r,int c){
