@@ -35,7 +35,7 @@ void findDirection(char field[][8],int r,int c,int row,int col){
         }
         count++;
 	}
-}
+} 
 
 void findMine(char field[][8]){
 	int i,j;
