@@ -29,12 +29,11 @@ void findDirection(char field[][8],int r,int c,int row,int col,char player){
 	else
 		opposit='1';	
 	while(checkLimit(r+(count*row),c+(count*col))){
-		if(checkLimit(r+(count*row),c+(count*col)) && field[r+(count*row)][c+(count*col)] == '0'){
+		if(field[r+(count*row)][c+(count*col)] == '0'){
 			break;
 		}
-		if(checkLimit(r+(count*row),c+(count*col)) && field[r+(count*row)][c+(count*col)] == opposit){
-                                
-			if(checkLimit(r+((count+1)*row),c+((count+1)*col)))
+		if(field[r+(count*row)][c+(count*col)] == opposit){                      
+			if(checkLimit(r+((count+1)*row),c+((count+1)*col)) && field[r+((count+1)*row)][c+((count+1)*col)]=='0')
                 field[r+((count+1)*row)][c+((count+1)*col)]='*';
 			break;
         }
